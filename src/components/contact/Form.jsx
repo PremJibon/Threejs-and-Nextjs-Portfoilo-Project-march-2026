@@ -29,53 +29,57 @@ export default function Form() {
   } = useForm();
 
   const sendEmail = (params) => {
+    if (
+      !process.env.NEXT_PUBLIC_SERVICE_ID ||
+      !process.env.NEXT_PUBLIC_TEMPLATE_ID ||
+      !process.env.NEXT_PUBLIC_PUBLIC_KEY
+    ) {
+      toast.error(
+        "Direct message casting is not configured yet! Please add your EmailJS keys to the .env file.",
+        {
+          duration: 6000,
+        }
+      );
+      return;
+    }
+
     const toastId = toast.loading("Sending your message, please wait...");
 
-    toast.info(
-      "Form submissions are demo-only here. Please checkout the final code repo to enable it. If you want to connect you can reach out to me via codebucks27@gmail.com.",
-      {
-        id: toastId,
-      }
-    );
-
-    // comment out the above toast.info and uncomment the below code to enable emailjs
-
-    // emailjs
-    //   .send(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    //     params,
-    //     {
-    //       publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-    //       limitRate: {
-    //         throttle: 5000, // you can not send more then 1 email per 5 seconds
-    //       },
-    //     }
-    //   )
-    //   .then(
-    //     () => {
-    //       toast.success(
-    //         "I have received your message, I will get back to you soon!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     },
-    //     (error) => {
-    //       // console.log("FAILED...", error.text);
-    //       toast.error(
-    //         "There was an error sending your message, please try again later!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     }
-    //   );
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        params,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+          limitRate: {
+            throttle: 5000, // you can not send more then 1 email per 5 seconds
+          },
+        }
+      )
+      .then(
+        () => {
+          toast.success(
+            "I have received your message, I will get back to you soon!",
+            {
+              id: toastId,
+            }
+          );
+        },
+        (error) => {
+          toast.error(
+            "There was an error sending your message, please try again later!",
+            {
+              id: toastId,
+            }
+          );
+        }
+      );
   };
 
   const onSubmit = (data) => {
     const templateParams = {
-      to_name: "CodeBucks",
+      to_name: "Prem Jibon",
       from_name: data.name,
       reply_to: data.email,
       message: data.message,
@@ -134,8 +138,8 @@ export default function Form() {
               message: "Message should be less than 500 characters",
             },
             minLength: {
-              value: 50,
-              message: "Message should be more than 50 characters",
+              value: 5,
+              message: "Message should be more than 5 characters",
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"

@@ -3,6 +3,8 @@ import "./globals.css";
 import clsx from "clsx";
 import FireFliesBackground from "@/components/FireFliesBackground";
 import Sound from "@/components/Sound";
+import OldPortfolioBtn from "@/components/OldPortfolioBtn";
+import Chatbot from "@/components/Chat/Chatbot";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,12 +14,12 @@ const inter = Inter({
 export const metadata = {
   title: {
     template:
-      "Next.js Portfolio Created with Three.js and Tailwind CSS | %s | CodeBucks",
+      "Prem Jibon's Portfolio | %s",
     default:
-      "Next.js Portfolio Created with Three.js and Tailwind CSS by CodeBucks",
+      "Prem Jibon | Full-stack Developer Portfolio",
   },
   description:
-    "A unique creative portfolio designed by CodeBucks with cutting-edge technologies like Next.js, Tailwind CSS, Three.js, and Framer Motion. Experience the art of modern web development firsthand. Checkout CodeBucks on youtube.",
+    "A creative portfolio for Shahed Hossain Prem (Prem Jibon), a full-stack developer specializing in modern web technologies like Next.js, Three.js, and Framer Motion.",
 };
 
 export default function RootLayout({ children }) {
@@ -32,6 +34,8 @@ export default function RootLayout({ children }) {
         {children}
         <FireFliesBackground />
         <Sound />
+        <OldPortfolioBtn />
+        <Chatbot />
         <div id="my-modal" />
       </body>
     </html>
