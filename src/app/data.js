@@ -21,14 +21,14 @@ export const projectsData = [
     id: 1,
     name: "Mondial Dashboard",
     description: "Modern analytics dashboard for Mondial",
-    date: "2024-03-15",
+    date: "2026-02-15",
     demoLink: "https://mondial-dashboard.vercel.app/",
   },
   {
     id: 2,
     name: "Pande Car Parking",
     description: "Management system for car parking",
-    date: "2024-03-10",
+    date: "2025-02-10",
     demoLink: "https://pande-car-parking.vercel.app/",
   },
   {
@@ -41,16 +41,16 @@ export const projectsData = [
   {
     id: 4,
     name: "Anime Blog Design",
-    description: "Custom web design for anime lovers",
+    description: "Custom web design using wordpress for anime lovers",
     date: "2023-09-15",
-    demoLink: "https://premjibon.ct.ws",
+    demoLink: "https://mangaanimebuzz.great-site.net/",
   },
   {
     id: 5,
     name: "Food Recipe Platform",
-    description: "End-to-end food recipe website",
+    description: "End-to-end food recipe website using wordpress",
     date: "2023-05-30",
-    demoLink: "https://premjibon.ct.ws",
+    demoLink: "https://easyrecipes.ct.ws/",
   },
   {
     id: 6,
@@ -61,10 +61,17 @@ export const projectsData = [
   },
   {
     id: 7,
-    name: "E-commerce Solution",
+    name: "Horse Power landing funnel page using cluade and wordpress",
+    description: "Official sales funnel form my client",
+    date: "2025-12-12",
+    demoLink: "https://horsepower.ct.ws/",
+  },
+  {
+    id: 8,
+    name: "Landingpage created using Cluade AI",
     description: "Scalable online store platform",
-    date: "2022-10-05",
-    demoLink: "https://premjibon.ct.ws",
+    date: "2026-02-05",
+    demoLink: "https://premjibon.github.io/dhaba-example-indaian-resturant-demo-client/",
   },
 ];
 
