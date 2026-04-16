@@ -73,6 +73,41 @@ export const projectsData = [
     date: "2026-02-05",
     demoLink: "https://premjibon.github.io/dhaba-example-indaian-resturant-demo-client/",
   },
+  {
+    id: 9,
+    name: "401k Calculator",
+    description: "Advanced retirement savings calculator",
+    date: "2026-03-25",
+    demoLink: "https://401k-calculator-beige.vercel.app/",
+  },
+  {
+    id: 10,
+    name: "CPS Test",
+    description: "Clicks per second speed testing tool",
+    date: "2026-03-20",
+    demoLink: "https://cps-test-six.vercel.app/cps-test",
+  },
+  {
+    id: 11,
+    name: "Morse Code Translator",
+    description: "Real-time English to Morse code converter",
+    date: "2026-03-15",
+    demoLink: "https://morse-code-translator-nextjs-5935.vercel.app/",
+  },
+  {
+    id: 12,
+    name: "VIN Checker",
+    description: "Vehicle Identification Number verification tool",
+    date: "2026-03-10",
+    demoLink: "https://vin-checker-navy.vercel.app/",
+  },
+  {
+    id: 13,
+    name: "Minecraft Circle Generator",
+    description: "Geometric pattern generator for Minecraft builds",
+    date: "2026-03-05",
+    demoLink: "https://minecraft-circle-generator-eight.vercel.app/",
+  },
 ];
 
 export const BtnList = [
