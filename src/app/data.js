@@ -117,10 +117,38 @@ export const projectsData = [
   },
 ];
 
+export const coursesData = [
+  {
+    id: 1,
+    name: "Python Full Course",
+    description: "Master Python from Zero to Hero. Cover basics, OOP, and Web Dev.",
+    date: "2026-05-01",
+    demoLink: "#",
+  },
+  {
+    id: 2,
+    name: "JavaScript Full Course",
+    description: "The complete guide to modern JavaScript (ES6+) and beyond.",
+    date: "2026-06-15",
+    demoLink: "#",
+  },
+];
+
+export const toolsData = [
+  {
+    id: 1,
+    name: "Site Scrapper",
+    description: "Advanced AI-powered lead generation and website auditing tool.",
+    date: "2026-04-28",
+    demoLink: "https://site-scrapper-krhi.vercel.app/",
+  },
+];
+
 export const BtnList = [
-  { label: "Home", link: "/", icon: "home", newTab: false },
   { label: "About", link: "/about", icon: "about", newTab: false },
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },
+  { label: "Courses", link: "/courses", icon: "courses", newTab: false },
+  { label: "Tools", link: "/tools", icon: "tools", newTab: false },
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",

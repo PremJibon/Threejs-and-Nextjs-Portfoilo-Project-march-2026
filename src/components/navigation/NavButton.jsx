@@ -8,6 +8,8 @@ import {
   Twitter,
   User,
   Facebook,
+  BookOpen,
+  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -35,6 +37,10 @@ const getIcon = (icon) => {
       return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
     case "facebook":
       return <Facebook className="w-full h-auto" strokeWidth={1.5} />;
+    case "courses":
+      return <BookOpen className="w-full h-auto" strokeWidth={1.5} />;
+    case "tools":
+      return <Wrench className="w-full h-auto" strokeWidth={1.5} />;
 
     default:
       return <Home className="w-full h-auto" strokeWidth={1.5} />;

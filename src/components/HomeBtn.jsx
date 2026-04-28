@@ -25,7 +25,7 @@ const HomeBtn = () => {
         <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
 
         <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap">
-          Home
+          Back to Menu
         </span>
       </span>
       <span className="sr-only">Go to Home Page</span>
