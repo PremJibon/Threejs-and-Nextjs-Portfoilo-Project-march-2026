@@ -1,14 +1,26 @@
-import { Inter } from "next/font/google";
+import { Inter, Space_Mono, Sora } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import FireFliesBackground from "@/components/FireFliesBackground";
 import Sound from "@/components/Sound";
 import OldPortfolioBtn from "@/components/OldPortfolioBtn";
+import YoutubeBtn from "@/components/YoutubeBtn";
 import Chatbot from "@/components/Chat/Chatbot";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
 });
 
 export const metadata = {
@@ -28,6 +40,8 @@ export default function RootLayout({ children }) {
       <body
         className={clsx(
           inter.variable,
+          spaceMono.variable,
+          sora.variable,
           "bg-background text-foreground font-inter"
         )}
       >
@@ -35,6 +49,7 @@ export default function RootLayout({ children }) {
         <FireFliesBackground />
         <Sound />
         <OldPortfolioBtn />
+        <YoutubeBtn />
         <Chatbot />
         <div id="my-modal" />
       </body>

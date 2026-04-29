@@ -123,7 +123,7 @@ export const coursesData = [
     name: "Python Full Course",
     description: "Master Python from Zero to Hero. Cover basics, OOP, and Web Dev.",
     date: "2026-05-01",
-    demoLink: "#",
+    demoLink: "/courses/python",
   },
   {
     id: 2,

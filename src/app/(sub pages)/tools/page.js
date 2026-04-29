@@ -2,6 +2,7 @@ import Image from "next/image";
 import bg from "../../../../public/background/tools-background.png";
 import PremiumList from "@/components/PremiumList";
 import { toolsData } from "../../data";
+import PasswordProtection from "@/components/PasswordProtection";
 
 export const metadata = {
   title: "Tools | Engineering Bay",
@@ -9,7 +10,7 @@ export const metadata = {
 
 export default function Tools() {
   return (
-    <>
+    <PasswordProtection>
       <Image
         src={bg}
         alt="Tools background"
@@ -32,6 +33,6 @@ export default function Tools() {
         
         <PremiumList items={toolsData} type="tool" />
       </div>
-    </>
+    </PasswordProtection>
   );
 }

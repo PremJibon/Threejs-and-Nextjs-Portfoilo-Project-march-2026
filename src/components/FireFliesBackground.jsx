@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const createFirefly = () => ({
   id: Math.random(),
@@ -9,9 +10,14 @@ const createFirefly = () => ({
 });
 
 const FireFliesBackground = () => {
+  const pathname = usePathname();
   const [fireflies, setFireflies] = useState([]);
 
+  // Hide on course lesson pages
+  const isCourseSubPage = pathname?.startsWith("/courses/");
+
   useEffect(() => {
+    if (isCourseSubPage) return; // skip interval if on course page
     const addFireflyPeriodically = () => {
       const newFirefly = createFirefly();
       setFireflies((currentFireflies) => [
@@ -23,7 +29,10 @@ const FireFliesBackground = () => {
     const interval = setInterval(addFireflyPeriodically, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isCourseSubPage]);
+
+  if (isCourseSubPage) return null;
+
 
   return (
     <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">

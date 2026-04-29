@@ -8,13 +8,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        inter: ['var(--font-inter)']
+        inter: ['var(--font-inter)'],
+        mono: ['var(--font-space-mono)'],
+        sora: ['var(--font-sora)'],
       },
       colors:{
         background: 'rgb(var(--background))',
         foreground: 'rgb(var(--foreground))',
         muted: 'rgb(var(--muted))',
         accent: 'rgb(var(--accent))',
+        'game-teal': '#2DD4BF',
+        'game-purple': '#A855F7',
+        'game-dark': '#0A0A0A',
       },
       backgroundImage:{
         'firefly-radial': "radial-gradient(50% 50% at 50% 50%, rgba(253, 255, 80, 0.5) 0%, rgba(217,217,217, 0) 100%)"

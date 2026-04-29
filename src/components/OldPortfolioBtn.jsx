@@ -3,10 +3,14 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const NavLink = motion(Link);
 
 const OldPortfolioBtn = () => {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/courses/")) return null;
+
   return (
     <NavLink
       initial={{ scale: 0 }}

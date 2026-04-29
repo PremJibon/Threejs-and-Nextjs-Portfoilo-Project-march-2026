@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { usePathname } from "next/navigation";
 
 const Modal = ({ onClose, toggle }) => {
   return createPortal(
@@ -35,9 +36,14 @@ const Modal = ({ onClose, toggle }) => {
 };
 
 const Sound = () => {
+  const pathname = usePathname();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+  // Hide sound component entirely on course lesson pages
+  const isCourseSubPage = pathname?.startsWith("/courses/");
+  if (isCourseSubPage) return null;
 
   const handleFirstUserInteraction = () => {
     const musicConsent = localStorage.getItem("musicConsent");
