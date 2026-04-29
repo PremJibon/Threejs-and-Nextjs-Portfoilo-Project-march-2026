@@ -41,9 +41,8 @@ const Sound = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  // Hide sound component entirely on course lesson pages
+  // Check if it's a course lesson page to hide sound component
   const isCourseSubPage = pathname?.startsWith("/courses/");
-  if (isCourseSubPage) return null;
 
   const handleFirstUserInteraction = () => {
     const musicConsent = localStorage.getItem("musicConsent");
@@ -86,6 +85,9 @@ const Sound = () => {
     localStorage.setItem("consentTime", new Date().toISOString());
     setShowModal(false);
   };
+
+  if (isCourseSubPage) return null;
+
   return (
     <div className="fixed top-4 right-2.5 xs:right-4 z-50 group">
       {showModal && (
