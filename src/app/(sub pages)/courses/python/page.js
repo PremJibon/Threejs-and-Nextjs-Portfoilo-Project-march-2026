@@ -10,100 +10,113 @@ import bg from "../../../../../public/background/courses-background.png";
 const INITIAL_PHASES = [
   {
     id: 1,
-    title: "The Newbie Narrative",
+    title: "1. Hello, Python",
     difficulty: "Beginner",
-    description: "Start your quest here. Master the syntax, variables, and the logic of the Python serpent. This phase focuses on core Python and visual feedback.",
-    conceptTitle: "Variable Boxes & Basic Flow",
+    description: "Start your quest here. Master the syntax, variable assignment, and numbers in the Python world. Your first steps towards data science mastery.",
+    conceptTitle: "Syntax & Variables",
     missions: [
       { 
         id: 101, 
-        title: "Setup + First Code", 
-        xp: 50, coins: 10, completed: false, locked: false,
-        lesson: "Welcome to Python! To get started, you just need to know how to print output to the screen. Use the print() function.",
-        starterCode: "# Print a welcome message to the console\nprint('Hello, Python Explorer!')"
-      },
-      { 
-        id: 102, 
-        title: "Variables (Visual Box System)", 
-        xp: 100, coins: 25, completed: false, locked: true,
-        lesson: "Variables are like boxes where you store data. Just name it and assign a value! Try creating variables for your player name and health.",
-        starterCode: "player_name = 'Hero'\nplayer_health = 100\n\n# Print the variables\nprint('Player:', player_name)\nprint('Health:', player_health)"
-      },
-      { 
-        id: 103, 
-        title: "Data Types", 
-        xp: 150, coins: 30, completed: false, locked: true,
-        lesson: "Python has different types of data: Strings (text), Integers (whole numbers), and Floats (decimals). Let's see how they work together.",
-        starterCode: "coins = 50       # Integer\nmultiplier = 1.5 # Float\n\ntotal = coins * multiplier\nprint('Total Coins:', total)"
-      },
-      { 
-        id: 104, 
-        title: "Conditionals (Decision Gates)", 
-        xp: 200, coins: 40, completed: false, locked: true,
-        lesson: "Code needs to make decisions. Use 'if' to execute code when a condition is True, and 'else' for when it's False.",
-        starterCode: "player_level = 5\n\nif player_level >= 10:\n    print('You can enter the dungeon!')\nelse:\n    print('You need more XP.')"
-      },
-      { 
-        id: 105, 
-        title: "Loops (Animation-based)", 
-        xp: 250, coins: 50, completed: false, locked: true,
-        lesson: "Loops allow you to repeat actions. A 'for' loop iterates over a sequence. Let's count down from 3.",
-        starterCode: "for count in range(3, 0, -1):\n    print(count)\nprint('Go!')"
+        title: "Hello, Python", 
+        xp: 100, coins: 20, completed: false, locked: false,
+        lesson: "Welcome to Python! A quick introduction to syntax, variable assignment, and arithmetic operations.",
+        starterCode: "spam_amount = 0\nprint(spam_amount)\n\n# Ordering Spam, egg, Spam, Spam, bacon and Spam (4 more servings of Spam)\nspam_amount = spam_amount + 4\nprint(spam_amount)"
       }
     ]
   },
   {
     id: 2,
-    title: "The Logic Labyrinth",
-    difficulty: "Intermediate",
-    description: "Make users build actual games. Focus on Real Logic + Mini Games using Pygame Zero principles.",
-    conceptTitle: "Game Loops & Events",
+    title: "2. Functions and Getting Help",
+    difficulty: "Beginner",
+    description: "Calling functions and defining our own, and using Python's built-in documentation.",
+    conceptTitle: "Functions & Docstrings",
     missions: [
       { 
         id: 201, 
-        title: "Lists & Dictionaries", 
-        xp: 300, coins: 60, completed: false, locked: true,
-        lesson: "Lists store multiple items in an ordered sequence. Dictionaries store data in key-value pairs. They are essential for game inventory systems.",
-        starterCode: "inventory = ['sword', 'shield', 'potion']\nplayer_stats = {'strength': 15, 'agility': 10}\n\nprint('Inventory:', inventory)\nprint('Strength:', player_stats['strength'])"
-      },
-      { 
-        id: 202, 
-        title: "Functions (Reusable Magic)", 
-        xp: 400, coins: 80, completed: false, locked: true,
-        lesson: "Functions let you bundle code into reusable blocks. Define a function using 'def' and call it whenever you need that logic.",
-        starterCode: "def attack_enemy(damage):\n    print('You dealt', damage, 'damage!')\n\n# Call the function\nattack_enemy(25)"
+        title: "Defining Functions", 
+        xp: 150, coins: 30, completed: false, locked: true,
+        lesson: "Learn to use the help() function and define your own functions using the 'def' keyword.",
+        starterCode: "def least_difference(a, b, c):\n    \"\"\"Return the smallest difference between any two numbers among a, b and c.\"\"\"\n    diff1 = abs(a - b)\n    diff2 = abs(b - c)\n    diff3 = abs(a - c)\n    return min(diff1, diff2, diff3)\n\nprint(least_difference(1, 10, 100))"
       }
     ]
   },
   {
     id: 3,
-    title: "Architecting the Mind",
-    difficulty: "Advanced",
-    description: "Systems Thinking. Make them think like engineers with deep OOP, Data structures, and File handling.",
-    conceptTitle: "Object-Oriented Programming",
+    title: "3. Booleans and Conditionals",
+    difficulty: "Beginner",
+    description: "Using booleans for branching logic. Make your code make decisions.",
+    conceptTitle: "Control Flow",
     missions: [
       { 
         id: 301, 
-        title: "Classes and Objects", 
-        xp: 500, coins: 100, completed: false, locked: true,
-        lesson: "Classes are blueprints for creating objects. An object bundles data (attributes) and behavior (methods) together.",
-        starterCode: "class Player:\n    def __init__(self, name):\n        self.name = name\n        self.score = 0\n\np1 = Player('Zora')\nprint(p1.name, 'joined the game.')"
+        title: "If, Elif, and Else", 
+        xp: 200, coins: 40, completed: false, locked: true,
+        lesson: "Python uses booleans to evaluate conditions. Use if, elif, and else statements to control the flow of your program.",
+        starterCode: "def inspect(x):\n    if x == 0:\n        print(x, 'is zero')\n    elif x > 0:\n        print(x, 'is positive')\n    elif x < 0:\n        print(x, 'is negative')\n    else:\n        print(x, 'is unlike anything I\\'ve ever seen...')\n\ninspect(0)\ninspect(-15)"
       }
     ]
   },
   {
     id: 4,
-    title: "Expert / Monetizable Skills",
-    difficulty: "Expert",
-    description: "Real-world SaaS development. Make users job-ready with APIs, Authentication, Databases, and Deployment.",
-    conceptTitle: "APIs & Databases",
+    title: "4. Lists",
+    difficulty: "Intermediate",
+    description: "Lists and the things you can do with them. Includes indexing, slicing and mutating.",
+    conceptTitle: "Lists & Mutability",
     missions: [
       { 
         id: 401, 
-        title: "Mock API Fetch", 
-        xp: 1000, coins: 200, completed: false, locked: true,
-        lesson: "In the real world, you fetch data from APIs. Let's simulate a basic API response handling.",
-        starterCode: "import json\n\nmock_response = '{\"user\": \"Alex\", \"role\": \"admin\"}'\ndata = json.loads(mock_response)\n\nprint('Welcome back,', data['user'])"
+        title: "Lists and Indexing", 
+        xp: 250, coins: 50, completed: false, locked: true,
+        lesson: "Lists represent ordered sequences of values. Learn how to index, slice, and modify them.",
+        starterCode: "planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']\n\n# Get the planet closest to the sun\nprint('Closest:', planets[0])\n\n# Get the last planet\nprint('Farthest:', planets[-1])\n\n# Slicing\nprint('First 3 planets:', planets[0:3])"
+      }
+    ]
+  },
+  {
+    id: 5,
+    title: "5. Loops and List Comprehensions",
+    difficulty: "Intermediate",
+    description: "For and while loops, and a much-loved Python feature: list comprehensions.",
+    conceptTitle: "Loops & Comprehensions",
+    missions: [
+      { 
+        id: 501, 
+        title: "For Loops & Comprehensions", 
+        xp: 300, coins: 60, completed: false, locked: true,
+        lesson: "For loops let you iterate over lists. List comprehensions provide a concise way to create lists.",
+        starterCode: "planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']\n\n# Standard loop\nfor planet in planets:\n    print(planet, end=' ')\nprint()\n\n# List comprehension: uppercase all planets\nupper_planets = [planet.upper() for planet in planets]\nprint(upper_planets)"
+      }
+    ]
+  },
+  {
+    id: 6,
+    title: "6. Strings and Dictionaries",
+    difficulty: "Intermediate",
+    description: "Working with strings and dictionaries, two of Python's most powerful data structures.",
+    conceptTitle: "Strings & Dictionaries",
+    missions: [
+      { 
+        id: 601, 
+        title: "Dictionaries", 
+        xp: 350, coins: 70, completed: false, locked: true,
+        lesson: "Dictionaries are built-in Python data structures for mapping keys to values.",
+        starterCode: "numbers = {'one':1, 'two':2, 'three':3}\n\nprint('Value for one:', numbers['one'])\n\n# Add a new key-value pair\nnumbers['eleven'] = 11\n\n# Iterate over dictionary\nfor k, v in numbers.items():\n    print('{} = {}'.format(k, v))"
+      }
+    ]
+  },
+  {
+    id: 7,
+    title: "7. Working with External Libraries",
+    difficulty: "Advanced",
+    description: "Imports, operator overloading, and namespaces. Learn how to leverage the Python ecosystem.",
+    conceptTitle: "Imports & Libraries",
+    missions: [
+      { 
+        id: 701, 
+        title: "Imports and Namespaces", 
+        xp: 400, coins: 100, completed: false, locked: true,
+        lesson: "The power of Python lies in its ecosystem. Learn how to import external libraries like math.",
+        starterCode: "import math\n\nprint('Pi is approximately', math.pi)\nprint('Log of 32 base 2 is', math.log(32, 2))\n\n# Using aliases\nimport numpy as np\nrolls = np.random.randint(low=1, high=6, size=10)\nprint('10 dice rolls:', rolls)"
       }
     ]
   }
@@ -193,8 +206,8 @@ export default function PythonCoursePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-2xl">
             {[
-              { label: "Phases", value: "4" },
-              { label: "Missions", value: "40+" },
+              { label: "Phases", value: "7" },
+              { label: "Missions", value: "7+" },
               { label: "System", value: "XP" },
               { label: "Rewards", value: "Shop" },
             ].map((stat, i) => (
