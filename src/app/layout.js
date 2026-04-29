@@ -44,6 +44,7 @@ export default function RootLayout({ children }) {
           sora.variable,
           "bg-background text-foreground font-inter"
         )}
+        suppressHydrationWarning
       >
         {children}
         <FireFliesBackground />
