@@ -144,11 +144,42 @@ export const toolsData = [
   },
 ];
 
+export const gamesData = [
+  {
+    id: 1,
+    name: "Space Invaders",
+    description: "A classic arcade game built with vanilla JavaScript and Canvas.",
+    date: "2021-05-20",
+    demoLink: "https://premjibon.github.io/spaceinveders/",
+    thumbnail: "/games/space-invaders.png",
+    badge: "Original",
+  },
+  {
+    id: 2,
+    name: "Flappy Bird Clone",
+    description: "A classic Flappy Bird clone built with web technologies.",
+    date: "2022-08-10",
+    demoLink: "https://premjibon.github.io/flappybird/",
+    thumbnail: "/games/flappy-bird.png",
+    badge: "Arcade",
+  },
+  {
+    id: 3,
+    name: "BreakOut JS",
+    description: "The classic brick-breaking game built with vanilla JavaScript.",
+    date: "2023-01-15",
+    demoLink: "https://premjibon.github.io/BreakOut-js/",
+    thumbnail: "/games/breakout.png",
+    badge: "Classic",
+  },
+];
+
 export const BtnList = [
   { label: "About", link: "/about", icon: "about", newTab: false },
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },
   { label: "Courses", link: "/courses", icon: "courses", newTab: false },
   { label: "Tools", link: "/tools", icon: "tools", newTab: false },
+  { label: "Games", link: "/games", icon: "games", newTab: false },
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",

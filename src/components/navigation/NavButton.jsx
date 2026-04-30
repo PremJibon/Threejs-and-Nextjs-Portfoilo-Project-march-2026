@@ -10,6 +10,7 @@ import {
   Facebook,
   BookOpen,
   Wrench,
+  Gamepad2,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -41,6 +42,8 @@ const getIcon = (icon) => {
       return <BookOpen className="w-full h-auto" strokeWidth={1.5} />;
     case "tools":
       return <Wrench className="w-full h-auto" strokeWidth={1.5} />;
+    case "games":
+      return <Gamepad2 className="w-full h-auto" strokeWidth={1.5} />;
 
     default:
       return <Home className="w-full h-auto" strokeWidth={1.5} />;

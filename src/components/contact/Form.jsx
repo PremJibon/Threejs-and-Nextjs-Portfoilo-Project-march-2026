@@ -82,7 +82,7 @@ export default function Form() {
       to_name: "Prem Jibon",
       from_name: data.name,
       reply_to: data.email,
-      message: data.message,
+      message: `Message from Portfolio Website: \n\nName: ${data.name}\nEmail: ${data.email}\n\nMessage: ${data.message}`,
     };
 
     sendEmail(templateParams);

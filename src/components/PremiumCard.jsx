@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BookOpen, Wrench, ExternalLink } from "lucide-react";
+import { BookOpen, Wrench, ExternalLink, Gamepad2 } from "lucide-react";
 
 const item = {
   hidden: { opacity: 0, y: 50 },
@@ -22,7 +22,13 @@ const PremiumCard = ({ name, description, date, demoLink, type }) => {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-start gap-4">
               <div className="p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-background transition-all duration-300">
-                {type === "course" ? <BookOpen size={24} /> : <Wrench size={24} />}
+                {type === "course" ? (
+                  <BookOpen size={24} />
+                ) : type === "game" ? (
+                  <Gamepad2 size={24} />
+                ) : (
+                  <Wrench size={24} />
+                )}
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-accent transition-colors">

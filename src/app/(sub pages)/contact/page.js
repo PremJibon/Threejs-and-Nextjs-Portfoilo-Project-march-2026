@@ -32,7 +32,6 @@ export default function Contact() {
         </p>
       </div>
       <Form />
-      <MessengerBtn />
     </>
   );
 }

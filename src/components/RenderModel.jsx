@@ -10,7 +10,8 @@ const RenderModel = ({ children, className }) => {
       className={clsx("w-screen h-screen -z-10 relative", className)}
       shadows={false}
       dpr={[1, 2]}
-      // dpr is the device pixel ratio. Here we are setting it to 1 and 2 for retina displays to prevent blurriness in the model rendering on high resolution screens.
+      gl={{ antialias: true }}
+      // dpr is the device pixel ratio. Here we are setting it back to [1, 2] for better compatibility.
     >
       <Suspense fallback={null}>{children}</Suspense>
       <Environment preset="dawn" />
