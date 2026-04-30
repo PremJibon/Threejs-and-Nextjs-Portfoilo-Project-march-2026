@@ -137,10 +137,10 @@ export const coursesData = [
 export const toolsData = [
   {
     id: 1,
-    name: "Site Scrapper",
+    name: "Site Scrapper lead generator",
     description: "Advanced AI-powered lead generation and website auditing tool.",
     date: "2026-04-28",
-    demoLink: "https://site-scrapper-krhi.vercel.app/",
+    demoLink: "https://site-scrapper-pj.vercel.app/",
   },
 ];
 
